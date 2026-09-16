@@ -2,12 +2,8 @@ name: Publish Go Bindings
 
 on:
   push:
-    branches:
-      - main
-
-permissions:
-  id-token: write
-  contents: read
+    tags:
+      - 'v*.*.*'
 
 jobs:
   publish-go:
